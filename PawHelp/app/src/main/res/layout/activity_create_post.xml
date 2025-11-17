@@ -155,6 +155,77 @@
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
 
+                <!-- Category Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="DANH MỤC"
+                    android:textColor="@color/primary_teal"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinnerCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/bg_search"
+                    android:dropDownVerticalOffset="50dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp" />
+
+                <!-- Tags Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="TAGS (TÙY CHỌN)"
+                    android:textColor="@color/primary_teal"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chipGroupTags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:chipSpacingHorizontal="8dp"
+                    app:singleSelection="false">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipDog"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🐕 Chó"
+                        app:chipBackgroundColor="@color/background_light" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipCat"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🐱 Mèo"
+                        app:chipBackgroundColor="@color/background_light" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipRescue"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🆘 Cứu hộ"
+                        app:chipBackgroundColor="@color/background_light" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipAdoption"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="❤️ Nhận nuôi"
+                        app:chipBackgroundColor="@color/background_light" />
+                </com.google.android.material.chip.ChipGroup>
+
                 <!-- Title Section -->
                 <TextView
                     android:layout_width="wrap_content"

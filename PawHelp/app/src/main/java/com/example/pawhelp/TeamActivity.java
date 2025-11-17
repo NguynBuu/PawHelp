@@ -1,7 +1,10 @@
 package com.example.pawhelp;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -13,10 +16,12 @@ import java.util.List;
 public class TeamActivity extends AppCompatActivity {
 
     private ImageView ivBack;
+    private EditText etSearch;
     private RecyclerView recyclerViewTeam;
     private FloatingActionButton fabChat;
     private TeamAdapter teamAdapter;
     private List<TeamMember> teamMembers;
+    private List<TeamMember> filteredMembers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +31,12 @@ public class TeamActivity extends AppCompatActivity {
         initViews();
         setupRecyclerView();
         setupListeners();
+        setupSearch();
     }
 
     private void initViews() {
         ivBack = findViewById(R.id.ivBack);
+        etSearch = findViewById(R.id.etSearch);
         recyclerViewTeam = findViewById(R.id.recyclerViewTeam);
         fabChat = findViewById(R.id.fabChat);
     }
@@ -59,9 +66,45 @@ public class TeamActivity extends AppCompatActivity {
                 R.drawable.member3
         ));
 
-        teamAdapter = new TeamAdapter(this, teamMembers);
+        filteredMembers = new ArrayList<>(teamMembers);
+        teamAdapter = new TeamAdapter(this, filteredMembers);
         recyclerViewTeam.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewTeam.setAdapter(teamAdapter);
+    }
+
+    private void setupSearch() {
+        etSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                filterMembers(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+    }
+
+    private void filterMembers(String query) {
+        filteredMembers.clear();
+
+        if (query.isEmpty()) {
+            filteredMembers.addAll(teamMembers);
+        } else {
+            String lowerQuery = query.toLowerCase();
+            for (TeamMember member : teamMembers) {
+                if (member.getName().toLowerCase().contains(lowerQuery) ||
+                    member.getPosition().toLowerCase().contains(lowerQuery)) {
+                    filteredMembers.add(member);
+                }
+            }
+        }
+
+        teamAdapter.notifyDataSetChanged();
     }
 
     private void setupListeners() {
