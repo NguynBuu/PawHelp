@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background với gradient -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="135"
+                android:startColor="#5DB1A8"
+                android:centerColor="#6BC4BA"
+                android:endColor="#7DD4CA"
+                android:type="linear"/>
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+
+    <!-- Overlay với opacity nhẹ -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#20000000"/>
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+</layer-list>
+
