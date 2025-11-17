@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">PawHelp</string>
+
+    <!-- About Us Activity -->
+    <string name="back_button">Quay lại</string>
+    <string name="chat_button">Trò chuyện</string>
+    <string name="about_us_image">Hình ảnh về chúng tôi</string>
+
+    <!-- Team Activity -->
+    <string name="avatar">Ảnh đại diện</string>
+
+    <!-- Create Post Activity -->
+    <string name="preview_image">Xem trước hình ảnh</string>
 </resources>
