@@ -87,26 +87,11 @@ public class CreatePostActivity extends AppCompatActivity {
     }
 
     private void setupListeners() {
-        ivBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        ivBack.setOnClickListener(v -> finish());
 
-        cardUploadImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openImagePicker();
-            }
-        });
+        cardUploadImage.setOnClickListener(v -> openImagePicker());
 
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                submitPost();
-            }
-        });
+        btnSubmit.setOnClickListener(v -> submitPost());
     }
 
     private void openImagePicker() {
@@ -150,5 +135,17 @@ public class CreatePostActivity extends AppCompatActivity {
         // Simulate success
         Toast.makeText(this, "Đăng bài thành công!", Toast.LENGTH_LONG).show();
         finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
     }
 }

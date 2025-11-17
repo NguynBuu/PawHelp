@@ -41,36 +41,27 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupListeners() {
         // Mở AboutUsActivity khi click vào card
-        cardAboutUs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, AboutUsActivity.class);
-                startActivity(intent);
-                // Add transition animation
-                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-            }
+        cardAboutUs.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, AboutUsActivity.class);
+            startActivity(intent);
+            // Add transition animation
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
         });
 
         // Mở TeamActivity khi click vào card
-        cardTeam.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, TeamActivity.class);
-                startActivity(intent);
-                // Add transition animation
-                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-            }
+        cardTeam.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, TeamActivity.class);
+            startActivity(intent);
+            // Add transition animation
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
         });
 
         // Mở CreatePostActivity khi click vào card
-        cardCreatePost.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CreatePostActivity.class);
-                startActivity(intent);
-                // Add transition animation
-                overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-            }
+        cardCreatePost.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CreatePostActivity.class);
+            startActivity(intent);
+            // Add transition animation
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
         });
     }
 }
