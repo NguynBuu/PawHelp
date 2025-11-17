@@ -1,6 +1,18 @@
 <resources>
     <string name="app_name">PawHelp</string>
 
+    <!-- Main Activity -->
+    <string name="app_subtitle">Kết nối cộng đồng yêu thương\nvà hỗ trợ động vật</string>
+    <string name="about_us_title">Về chúng tôi</string>
+    <string name="about_us_subtitle">Tìm hiểu về Hội Cựu Trò Dũng Vân</string>
+    <string name="team_title">Đội ngũ</string>
+    <string name="team_subtitle">Gặp gỡ đội ngũ của chúng tôi</string>
+    <string name="create_post_title">Tạo bài viết</string>
+    <string name="create_post_subtitle">Chia sẻ câu chuyện của bạn</string>
+    <string name="back_icon_desc">Quay lại</string>
+    <string name="version_info">Version 1.0</string>
+    <string name="logo_pewhelp_desc">Logo PawHelp</string>
+
     <!-- About Us Activity -->
     <string name="back_button">Quay lại</string>
     <string name="chat_button">Trò chuyện</string>

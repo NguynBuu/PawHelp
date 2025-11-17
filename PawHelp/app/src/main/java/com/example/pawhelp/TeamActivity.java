@@ -48,21 +48,21 @@ public class TeamActivity extends AppCompatActivity {
                 "Nhà sáng lập",
                 "• Chuyên gia cứu hộ\n• Trước khi sáng lập nên DANANG PETADOPTTEAM",
                 "ĐÃ ĐĂNG KÝ",
-                R.drawable.member1
+                R.drawable.ic_avatar_placeholder
         ));
         teamMembers.add(new TeamMember(
                 "Nguyễn Thanh Hiền",
                 "Quản lý dự án",
                 "Hành trình trở thành tình nguyện viên của DPT vào năm 2020 với sứ mệnh",
                 "TRỢ LÝ ĐỘI TRƯỞNG",
-                R.drawable.member2
+                R.drawable.ic_avatar_placeholder
         ));
         teamMembers.add(new TeamMember(
                 "Phạm Hồng Hạnh",
                 "Tình nguyện viên",
                 "Chuyên viên chăm sóc và bảo vệ động vật",
                 "THÀNH VIÊN",
-                R.drawable.member3
+                R.drawable.ic_avatar_placeholder
         ));
 
         filteredMembers = new ArrayList<>(teamMembers);
@@ -114,11 +114,6 @@ public class TeamActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finish();
-    }
 
     @Override
     public void finish() {
