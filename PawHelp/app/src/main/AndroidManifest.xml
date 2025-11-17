@@ -12,6 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PawHelp">
         <activity
+            android:name=".CreatePostActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".TeamActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".AboutUsActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
